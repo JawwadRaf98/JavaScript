@@ -103,5 +103,70 @@
     document.write(table+"X 10 ="+table*10+"<br>");
 
 
-//Chapter no 6
+//Chapter no 6 to 9
+    //Task no 1
+    var a = parseInt(prompt("Enter number;")) ;
+    document.write("Result <br> The value of a is: "+a+"<br>.............................<br><br>");
 
+    document.write("The vallue of ++a is: "+ ++a +"<br>");
+    document.write("Now the vallue of a is: "+ a +"<br><br>");
+
+    document.write("The vallue of a++ is: "+ a++ +"<br>");
+    document.write("Now the vallue of a is: "+ a +"<br><br>");
+
+    document.write("The vallue of --a is: "+ --a +"<br>");
+    document.write("Now the vallue of a is: "+ a +"<br><br>");
+
+    document.write("The vallue of a-- is: "+ a-- +"<br>");
+    document.write("Now the vallue of a is: "+ a +"<br><br>");
+
+    //Task no 2
+
+    document.write("a is "+a+"<br>b is "+b+"<br>");
+    a = 2, b = 1;
+    document.write("--a is"+ --a);
+    a = 2, b = 1;
+    document.write("<br> --a - --b is "+ (--a - --b) );
+    a = 2, b = 1;
+    document.write("<br> --a - --b + ++b is "+ ((--a - --b) + ++b) );
+    a = 2, b = 1;
+    document.write("<br> Result : --a - --b + ++b  + b-- is "+ (((--a - --b) + ++b) + b--));
+
+    //Task no 3
+
+    var name = prompt("Enter your name:");
+    alert("Hello! \n"+name);
+
+    //Task no 5
+
+    var num = parseInt(prompt("Enter number: "));
+        if(!num){
+           for(var i = 1; i<=10;i++){
+               document.write(5 +" X "+ i +" = "+ 5*i +"<br>");
+           }
+        }
+        else{
+            for(var i = 1; i<=10;i++){
+               document.write(num +" X "+ i +" = "+ num*i +"<br>");
+           }
+        }
+    //Task no 6
+
+    var sub1 = prompt("Enter the name of first subject:");
+    var sub2 = prompt("Enter the name of second subject:");
+    var sub3 = prompt("Enter the name of third subject:");
+
+    var totalMarks = 100;
+
+    markSub1 = parseInt(prompt("Enter obtained marks for subject " + sub1));
+    markSub2 = parseInt(prompt("Enter obtained marks for subject "+ sub2));
+    markSub3 = parseInt(prompt("Enter obtained marks for subject "+ sub3));
+
+    document.write("<table>")
+     
+    document.write("<tr><th>Subject </th><th>  Total Marks </th><th> Obtained Marks </th><th> Percentage </th></tr>")
+    document.write("<tr><td style = 'text-align:center'>" + sub1 + "</td><td style = 'text-align:center'>" + totalMarks + "</td><td style = 'text-align:center'>" + markSub1 + "</td><td style = 'text-align:center'>" + (Math.round((markSub1/ totalMarks) * 100) ) + " %</td></tr>")
+    document.write("<tr><td style = 'text-align:center'>" + sub2 + "</td><td style = 'text-align:center'>" + totalMarks + "</td><td style = 'text-align:center'>" + markSub2 + "</td><td style = 'text-align:center'>" + (Math.round((markSub2/ totalMarks) * 100)) + " %</td></tr>")
+    document.write("<tr><td style = 'text-align:center'>" + sub3 + "</td><td style = 'text-align:center'>" + totalMarks + "</td><td style = 'text-align:center'>" + markSub3 + "</td><td style = 'text-align:center'>" + (Math.round((markSub3/ totalMarks) * 100)) + " %</td></tr>")
+    document.write("<tr><td style = 'text-align:center'></td><td style = 'text-align:center'>" + (totalMarks*3) + "</td><td style = 'text-align:center'>" + (markSub1+markSub2+markSub3) + "</td><td style = 'text-align:center'>" + Math.round(((markSub1+markSub2+markSub3) / (3*totalMarks)) * 100) + " %</td></tr>")
+    document.write("</table>")
