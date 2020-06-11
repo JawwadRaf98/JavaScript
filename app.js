@@ -296,3 +296,49 @@ document.write("Obtained Marks: " + obtained + "<br>");
 document.write("Percentage: " + percentage + "<br>");
 document.write("Grade: " + grade + "<br>");
 document.write("Remarks: " + remarks + "<br>");
+
+//Task ono 7
+var num = 5;
+var guessNum = parseInt(prompt("Enter the number: "));
+if (guessNum === num) {
+    alert("Bingo! Correct Answer")
+}
+else if (guessNum === num + 1 || guessNum === num - 1) {
+    alert("Close Enough")
+}
+else {
+    alert("Your guess is wrong!")
+}
+
+//Task no 8
+var num = parseInt(prompt("Please enter the number to check divisiblity by 3"));
+if (num % 3 === 0) {
+    alert(num + " is divisible by 3")
+}
+else {
+    alert(num + " is not divisible by 3")
+}
+
+//Task no 9
+var num = parseInt(prompt("Please enter the number to check even or odd"));
+if (num % 2 === 0) {
+    alert(num + " is even")
+}
+else {
+    alert(num + " is odd")
+}
+
+//Task no 10
+var temp = parseInt(prompt("Enter Temperature"))
+       if(temp>=40){
+           alert("It is too hot today!")
+       }
+       else if(temp>=30){
+           alert("The Weather today is Normal.")
+       }
+       else if(temp>=20){
+           alert("Today’s Weather is cool.")
+       }
+       else if(temp>=10){
+        alert("OMG! Today’s weather is so Cool.")
+       }

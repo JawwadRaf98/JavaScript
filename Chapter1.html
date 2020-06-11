@@ -8,53 +8,7 @@
 
 
     <script type="text/javascript">
-
-        var totalSub1 = parseInt(prompt("Please enter the total marks for Subject no 1"));
-        var obtSub1 = parseInt(prompt("Please enter the obtained marks for Subject no 1"));
-
-        var totalSub2 = parseInt(prompt("Please enter the total marks for Subject no 2"));
-        var obtSub2 = parseInt(prompt("Please enter the obtained marks for Subject no 2"));
-
-        var totalSub3 = parseInt(prompt("Please enter the total marks for Subject no 3"));
-        var obtSub3 = parseInt(prompt("Please enter the obtained marks for Subject no 3"));
-
-        var grade, percentage, total,obtained, remarks;
-
-        total = totalSub1+totalSub2+totalSub3;
-        obtained = obtSub1+obtSub2+obtSub3;
-        percentage = Math.round((obtained/total)*100);
-        grade = ""; 
-        remarks = "";
-
-        if(percentage >= 80){
-            grade = "A-one";
-            remarks = "Excellent";
-        }
-        else if (percentage >= 70){
-            grade = "A";
-            remarks = "Good";
-        }
-        else if (percentage >= 60){
-            grade = "B";
-            remarks = "You need to improve";
-        }
-        else{
-            grade = "Fail";
-            remarks = "Sorry";
-        }
-
-
-        document.write("<h1>Marks Sheet</h1><br>");
-        document.write("Total Marks: "+total+"<br>");
-        document.write("Obtained Marks: "+obtained+"<br>");
-        document.write("Percentage: "+percentage+"<br>");
-        document.write("Grade: "+grade+"<br>");
-        document.write("Remarks: "+remarks+"<br>");
-
-
-
-
-
+       
     </script>
 
 
