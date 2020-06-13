@@ -330,15 +330,97 @@ else {
 
 //Task no 10
 var temp = parseInt(prompt("Enter Temperature"))
-       if(temp>=40){
-           alert("It is too hot today!")
-       }
-       else if(temp>=30){
-           alert("The Weather today is Normal.")
-       }
-       else if(temp>=20){
-           alert("Today’s Weather is cool.")
-       }
-       else if(temp>=10){
-        alert("OMG! Today’s weather is so Cool.")
-       }
+if (temp >= 40) {
+    alert("It is too hot today!")
+}
+else if (temp >= 30) {
+    alert("The Weather today is Normal.")
+}
+else if (temp >= 20) {
+    alert("Today’s Weather is cool.")
+}
+else if (temp >= 10) {
+    alert("OMG! Today’s weather is so Cool.")
+}
+
+//tast no 11
+var firstNo = parseInt(prompt("Enter first number"));
+var secondNo = parseInt(prompt("Enter second number"));
+var operator = prompt("select operator '+', '-', '*', '/', '%'");
+if (operator === '+') {
+    result = firstNo + secondNo;
+    alert(firstNo + " + " + secondNo + " = " + result)
+}
+else if (operator === '-') {
+    result = firstNo - secondNo;
+    alert(firstNo + " - " + secondNo + " = " + result)
+}
+else if (operator === '*') {
+    result = firstNo * secondNo;
+    alert(firstNo + " * " + secondNo + " = " + result)
+}
+else if (operator === '/') {
+    result = firstNo / secondNo;
+    alert(firstNo + " / " + secondNo + " = " + result)
+}
+else if (operator === '%') {
+    result = firstNo % secondNo;
+    alert(firstNo + " % " + secondNo + " = " + result)
+}
+else {
+    alert("Wrong operator")
+}
+
+//Chapter no 11-12
+//task1
+var inputValue = prompt("Please enter :");
+var check = inputValue.charCodeAt(0);
+
+if (check >= 65 && check <= 90) {
+    alert("Given input is 'String' and it is in Uppercase.");
+}
+else if (check >= 65 && check <= 122) {
+    alert("Given input is 'String' and it is in Lowerccase.");
+}
+else if (check >= 48 && check <= 57) {
+    alert("Given input is 'Number'");
+}
+else {
+    alert("Given input is not a 'Number' nor a 'String'");
+}
+
+//task 2
+var firstNo = parseInt(prompt("Please enter first number:"));
+var secondNo = parseInt(prompt("Please enter first number:"));
+
+if (firstNo > secondNo) {
+    alert(firstNo + " is greater than " + secondNo);
+}
+else if (secondNo > firstNo) {
+    alert(secondNo + " is greater than " + firstNo);
+}
+else {
+    alert("Both numbers are equal");
+}
+
+//task3
+var firstNo = parseInt(prompt("Please enter number:"));
+
+
+if (firstNo >= 0) {
+    alert(firstNo + " is positive");
+}
+
+else {
+    alert(firstNo + " is negative");
+}
+
+//TASK NO 4
+var inputValue = prompt("Please enter vowel:");
+if (inputValue === "A" || inputValue === 'a' || inputValue === 'E' || inputValue === 'e' || inputValue === 'I' || inputValue === 'i' || inputValue === 'O' || inputValue === 'o' || inputValue === 'U' || inputValue === 'u') {
+    alert("True it is vowel")
+}
+else {
+    alert("False it is not vowel")
+
+}
