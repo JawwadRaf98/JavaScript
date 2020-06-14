@@ -8,17 +8,35 @@
 
 
     <script type="text/javascript">
-        var studentLit = [];    
-        var studentObj = new Array();
-        var stringArray = ["jawwad", "Rafique", "Ahmed"];
-        var numArray = [1, 2, 3, 4];
-        var booleanArray = [true, false, true];
         
 
-        var cities = ['Karachi', 'Lahore', 'Islamabad','Quetta', 'Faisalabad'];
-        var selectedCites = cities.slice(1,4)
-        document.write("Cities: "+cities)
-        document.write("<br>Seleced Cities :" + selectedCites)
+        var color = ['red','yellow','green']
+        document.write('Color: '+color.join(", ")+" <br>")
+        //A
+        beginning = prompt("Enter color name to add at beginning");
+        color.unshift(beginning);
+        document.write('Updated color after adding at beginning:'+color.join(", ")+"<br>")
+        //B
+        end = prompt("Enter color name to add at end");
+        color.push(end)
+        document.write('Updated color after adding at end:'+color.join(", ")+"<br>")
+        //C
+        listColor = prompt("Enter color name to add two and more");
+        color.push(listColor)
+        document.write('Updated color after adding two or more:'+color.join(", ")+"<br>")
+        //D
+        color.shift()
+        document.write('Updated color after deleting first element of list:'+color.join(", ")+"<br>")
+        //E
+        color.pop()
+        document.write('Updated color after deleting last element of list:'+color.join(", ")+"<br>")
+        //F
+        var indexNum = parseInt(promt("please enter the index."))
+        var colorName = prompt("Enter color name")
+        color.splice(indexNum,0,colorName)
+        document.write('Updated color after adding element at index '+indexNum+' :'+color.join(", ")+"<br>")
+        
+
 
     </script>
 

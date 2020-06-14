@@ -469,6 +469,34 @@ for (var j = 0; j < names.length; j++) {
     document.write("<h4>Score of " + names[j] + " is " + obtMarks[j] + ". Percentage :" + (obtMarks[j] / 500 * 100) + " %</h4>")
 }
 
+
+
+var color = ['red','yellow','green']
+document.write('Color: '+color.join(", ")+" <br>")
+//A
+beginning = prompt("Enter color name to add at beginning");
+color.unshift(beginning);
+document.write('Updated color after adding at beginning:'+color.join(", ")+"<br>")
+//B
+end = prompt("Enter color name to add at end");
+color.push(end)
+document.write('Updated color after adding at end:'+color.join(", ")+"<br>")
+//C
+listColor = prompt("Enter color name to add two and more");
+color.push(listColor)
+document.write('Updated color after adding two or more:'+color.join(", ")+"<br>")
+//D
+color.shift()
+document.write('Updated color after deleting first element of list:'+color.join(", ")+"<br>")
+//E
+color.pop()
+document.write('Updated color after deleting last element of list:'+color.join(", ")+"<br>")
+//F
+var indexNum = parseInt(promt("please enter the index."))
+var colorName = prompt("Enter color name")
+color.splice(indexNum,0,colorName)
+document.write('Updated color after adding element at index '+indexNum+' :'+color.join(", ")+"<br>")
+
 var score = [124, 5345, 12342, 12124]
 alert(score.sort(function (a, b) { return a - b }))
 
@@ -476,3 +504,26 @@ var cities = ['Karachi', 'Lahore', 'Islamabad', 'Quetta', 'Faisalabad'];
 var selectedCites = cities.slice(1, 4)
 document.write("Cities: " + cities)
 document.write("<br>Seleced Cities :" + selectedCites)
+
+var arr = ['This', 'is', 'my', 'Cat'];
+document.write("Array: " + arr)
+document.write("<br>String :" + arr.join(" "))
+
+var arrOFObj = ['keybord', 'mouse', 'printer', 'moniter']
+
+for (i = 1; i <= 4; i++) {
+    alert("out:\n" + arrOFObj.shift() + "\n Remains : " + arrOFObj)
+}
+
+var arrOFObj = ['keybord', 'mouse', 'printer', 'moniter']
+
+for (i = 1; i <= 4; i++) {
+    alert("out:\n" + arrOFObj.pop() + "\n Remains : " + arrOFObj)
+}
+
+var phone = ['Phone', 'Apple', 'Samsung', 'Motorola', 'Nokia', 'Sony', 'Haier']
+document.write("<h1>Our Brand</h1><br><select>");
+for (var i = 0; i <= phone.length - 1; i++) {
+    document.write("<option>" + phone[i] + "</option>")
+}
+document.write("</select>")
