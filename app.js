@@ -424,3 +424,55 @@ else {
     alert("False it is not vowel")
 
 }
+
+//Task no 5
+var password = "bc180408671";
+var confirmPassword = prompt("Please enter your password.");
+if (confirmPassword === password) {
+    alert("Correct! The password you entered matches the original password");
+}
+else {
+    alert("Incorrect password”");
+}
+
+//TAsk no 6
+var greeting;
+var hour = 13;
+if (hour < 18) {
+    greeting = "Good day";
+}
+else {
+    greeting = "Good evening";
+}
+
+
+// chapter 14 -16
+var studentLit = [];
+var studentObj = new Array();
+var stringArray = ["jawwad", "Rafique", "Ahmed"];
+var numArray = [1, 2, 3, 4];
+var booleanArray = [true, false, true];
+var mixArray = [2, "December", 1998];
+var qualification = ['SSC', 'HSC', 'BSC', 'BS', 'BCOM', 'MS', 'M.Phil.', 'PhD']
+document.write("<h3>Qualification in Pakistan</h3>");
+document.write("<ol>");
+for (var i = 0; i <= qualification.length - 1; i++) {
+    document.write("<li>" + qualification[i] + "</li>");
+}
+document.write("</ol>")
+
+var names = ['Jawwad', 'Rafique', 'Ahmed'];
+var obtMarks = [321, 457, 392];
+
+alert(names.length)
+for (var j = 0; j < names.length; j++) {
+    document.write("<h4>Score of " + names[j] + " is " + obtMarks[j] + ". Percentage :" + (obtMarks[j] / 500 * 100) + " %</h4>")
+}
+
+var score = [124, 5345, 12342, 12124]
+alert(score.sort(function (a, b) { return a - b }))
+
+var cities = ['Karachi', 'Lahore', 'Islamabad', 'Quetta', 'Faisalabad'];
+var selectedCites = cities.slice(1, 4)
+document.write("Cities: " + cities)
+document.write("<br>Seleced Cities :" + selectedCites)
