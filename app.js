@@ -444,6 +444,31 @@ if (hour < 18) {
 else {
     greeting = "Good evening";
 }
+//task no 7
+var time = parseInt(prompt("Enter time in 24 hours format i.e 1259,1100,2359"));
+if (time <= 1159) {
+    var hour = ~~(time / 100);
+    var min = time % 100;
+    alert("Time = " + hour + ":" + min + " AM")
+}
+else if (time === 1200) {
+    alert("Time =12:00 PM")
+}
+else if (time === 2400) {
+    alert("Time =12:00 AM")
+}
+else {
+    var hour = ~~(time / 100);
+    var min = time % 100;
+    if (hour === 12) {
+        alert("Time = 12:" + min + " PM")
+    }
+    else {
+        hour = hour - 12;
+        alert("Time = " + hour + ":" + min + " PM")
+
+    }
+}
 
 
 // chapter 14 -16
@@ -471,31 +496,36 @@ for (var j = 0; j < names.length; j++) {
 
 
 
-var color = ['red','yellow','green']
-document.write('Color: '+color.join(", ")+" <br>")
+var color = ['red', 'yellow', 'green']
+document.write('Color: ' + color.join(", ") + " <br>")
 //A
 beginning = prompt("Enter color name to add at beginning");
 color.unshift(beginning);
-document.write('Updated color after adding at beginning:'+color.join(", ")+"<br>")
+document.write('Updated color after adding at beginning:' + color.join(", ") + "<br>")
 //B
 end = prompt("Enter color name to add at end");
 color.push(end)
-document.write('Updated color after adding at end:'+color.join(", ")+"<br>")
+document.write('Updated color after adding at end:' + color.join(", ") + "<br>")
 //C
 listColor = prompt("Enter color name to add two and more");
 color.push(listColor)
-document.write('Updated color after adding two or more:'+color.join(", ")+"<br>")
+document.write('Updated color after adding two or more:' + color.join(", ") + "<br>")
 //D
 color.shift()
-document.write('Updated color after deleting first element of list:'+color.join(", ")+"<br>")
+document.write('Updated color after deleting first element of list:' + color.join(", ") + "<br>")
 //E
 color.pop()
-document.write('Updated color after deleting last element of list:'+color.join(", ")+"<br>")
+document.write('Updated color after deleting last element of list:' + color.join(", ") + "<br>")
 //F
 var indexNum = parseInt(promt("please enter the index."))
 var colorName = prompt("Enter color name")
-color.splice(indexNum,0,colorName)
-document.write('Updated color after adding element at index '+indexNum+' :'+color.join(", ")+"<br>")
+color.splice(indexNum, 0, colorName)
+document.write('Updated color after adding element at index ' + indexNum + ' :' + color.join(", ") + "<br>")
+//G
+var indexNum = parseInt(prompt("please enter the index."))
+var delItems = parseInt(prompt("Plese enter how many element you wanat to remove"))
+color.splice(indexNum, delItems)
+document.write('Updated color after deleting element at index ' + indexNum + ' :' + color.join(", ") + "<br>")
 
 var score = [124, 5345, 12342, 12124]
 alert(score.sort(function (a, b) { return a - b }))
@@ -527,3 +557,113 @@ for (var i = 0; i <= phone.length - 1; i++) {
     document.write("<option>" + phone[i] + "</option>")
 }
 document.write("</select>")
+
+//Chapter no 16-20
+//task 1 and 2
+var multiArr = [[], [], []]
+multiArr[0] = [0, 1, 2, 3]
+multiArr[1] = [1, 0, 1, 2]
+multiArr[2] = [2, 1, 0, 1]
+//firstWay
+document.write(multiArr[0] + '<br>')
+document.write(multiArr[1] + '<br>')
+document.write(multiArr[2] + '<br>')
+//second Way
+for (var i = 0; i <= multiArr.length - 1; i++) {
+    document.write(multiArr[i] + "<br>")
+}
+
+//3rd
+for (var i = 1; i <= 10; i++) {
+    document.write(i + "<br>")
+}
+
+//4th
+var num = parseInt(prompt("Enter the number to show its multiplication table:"))
+var len = parseInt(prompt("Enter the number to show its multiplication table:"))
+
+for (var i = 1; i <= len; i++) {
+    document.write(num + " x " + i + " = " + num * i + "<br>")
+}
+
+//5th
+
+var fruits = ['apple', 'banana', 'mango', 'orange', 'strawberry']
+for (var i = 0; i <= fruits.length - 1; i++) {
+    document.write(fruits[i] + "<br>")
+}
+
+for (var i = 0; i <= fruits.length - 1; i++) {
+    document.write("Element at index " + i + " is " + fruits[i] + "<br>")
+}
+//6th
+var counting = []
+var reverse = []
+var evenNum = []
+var odd = []
+for (var i = 0; i <= 15; i++) {
+    counting.push(i)
+    reverse.unshift(i)
+    if (i % 2 === 0) {
+        evenNum.push(i)
+    }
+    else {
+        odd.push(i)
+    }
+
+}
+document.write("<h3>Counting</h3><br>")
+document.write(counting)
+document.write("<br><h3>Reverse Counting</h3><br>")
+document.write(reverse)
+document.write("<br><h3>Even</h3><br>")
+document.write(evenNum)
+document.write("<br><h3>Odd</h3><br>")
+document.write(odd)
+document.write("<br><h3>Series</h3><br>")
+document.write(evenNum.slice(1).join("k, ") + "k")
+//7TH
+var A = ['cake', 'apple pie', 'cookie', 'chips', 'patties']
+var userChoice = prompt("Welcome to ABC bakery what do you want to order sir/ma'am")
+var flag = false
+for (var i = 0; i <= A.length - 1; i++) {
+    if (userChoice.toLowerCase() === A[i]) {
+        flag = true
+        break;
+    }
+}
+if (flag) {
+    alert(userChoice + " is available at index " + A.indexOf((userChoice.toLowerCase())) + " in our bakery.")
+}
+else {
+    alert("We are sorry. " + userChoice + " is not available in our bakery.")
+}
+//another solution
+var A = ['cake', 'apple pie', 'cookie', 'chips', 'patties']
+var userChoice = prompt("Welcome to ABC bakery what do you want to order sir/ma'am")
+index = A.indexOf(userChoice)
+
+if (index === -1) {
+    alert("We are sorry. " + userChoice + " is not available in our bakery.")
+}
+else {
+    alert(A[index].toUpperCase() + " is available at index " + index + " in our bakery.")
+}
+
+//8th
+var A = [24, 53, 78, 91, 12]
+var decending = A.sort(function (a, b) { return b - a });
+alert(A + "\n" + "Largest: " + decending[0])
+
+//9th
+var A = [24, 53, 78, 91, 12]
+var ascending = A.sort(function (a, b) { return a - b });
+alert(A + "\n" + "Smallest: " + ascending[0])
+
+//10th
+var multipleOfFive = []
+for (var i = 5; i <= 100; i += 5) {
+    multipleOfFive.push(i)
+}
+document.write("<h2>Multiple of 5</h2><br>")
+document.write(multipleOfFive)
