@@ -91,6 +91,86 @@
 
     // Task no 13
 
+    var userName = prompt("Enter your user name");
+    var checking = true;
+
+    for(var i = 0; i<= userName.length; i++){
+        if(userName.charCodeAt(i) === 33 || userName.charCodeAt(i) === 44 || userName.charCodeAt(i) === 46 || userName.charCodeAt(i) === 64){
+            checking = false;
+        }
+    }
+    if(checking){
+        alert("Welcome "+userName);
+    }
+    else{
+        alert("Please enter valid username");
+    }
+
+    // Task no 14
+
+    A = ['cake', 'apple pie' ,'cookie', 'chips', 'patties'];
+    var userPromt = prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
+    var index = A.indexOf(userPromt.toLowerCase());
+    if(index>=0){
+        alert(A[index]+" is available at index "+ index +" in our bakery")
+    }
+    else{
+        alert("We are sorry!. "+userPromt.toLowerCase()+" is not avaible in our bakery")
+    }
+
+    
+    // Task no 15
+
+    var password = prompt("Enter your password: ");
+        var checkPassword = false
+        if ((password.charCodeAt(0) >= 48) && (password.charCodeAt(0) <= 57)) {
+            alert("Password can not begin with a number\nPlease enter a valid password.")
+        }
+        else if (password.length < 6) {
+            alert("Password must contain at least 6 character\nPlease enter a valid password.")
+        }
+        else {
+            for (var i = 0; i <= password.length - 1; i++) {
+                if (((password.charCodeAt(i) >= 48) && (password.charCodeAt(i) <= 57)) || ((password.charCodeAt(i) >= 65) && (password.charCodeAt(i) <= 90)) || ((password.charCodeAt(i) >= 97) && (password.charCodeAt(i) <= 122))) {
+                    checkPassword = true;
+                }
+                else {
+                    checkPassword = false;
+                    break;
+                }
+            }
+            if (checkPassword) {
+                alert("correct password")
+            }
+            else {
+                alert("invalid password")
+            }
+        }
+
+        // Task no 16
+
+        var university = "University of Karachi";
+        for(var i = 0; i<= university.length; i++){
+            document.write(university[i]+"<br>");
+        }
+
+        // Task no 17
+
+        var userInput = prompt("Please enter");
+        document.write("User input: "+userInput+"<br>Last Character of input: "+userInput[userInput.length-1])
+
+        // Task no 18
+
+        var text = "The quick brown fox jumps over the lazy dog";
+        var count = 0;
+
+        for (var i = 0; i < text.length -1 ; i++) {
+            if (text.slice(i, i + 3).toLowerCase() === "the") {
+                count= count + 1;
+            }
+        }
+        document.write("Text: "+text+"<br>There are "+count+" occurrences of word “the”")
+
     
 
 
