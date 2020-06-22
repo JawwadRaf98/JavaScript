@@ -171,7 +171,68 @@
         }
         document.write("Text: "+text+"<br>There are "+count+" occurrences of word “the”")
 
-    
+// Chapter no 26-30
+
+        // Task no 1
+        var num = 3.45214
+        document.write("Number: "+num+ "<br>");
+        document.write("Round of value: "+Math.round(num)+ "<br>");
+        document.write("Floor value: "+Math.floor(num)+ "<br>");
+        document.write("Ceil value: "+Math.ceil(num)+ "<br>");
+
+        // Task no 2
+        var num = prompt("Enter Floating Number");
+        num = parseFloat(num);
+        document.write("Number: "+num+ "<br>");
+        document.write("Round of value: "+Math.round(num)+ "<br>");
+        document.write("Floor value: "+Math.floor(num)+ "<br>");
+        document.write("Ceil value: "+Math.ceil(num)+ "<br>");
+
+        // Task no 3
+        var num = prompt("Enter number");
+        num = parseInt(num);
+        document.write("The absolute value of "+num+" is "+Math.abs(num))
+
+        // Task no 4
+        var num = Math.random()
+        num = (( num * 100000000000000000)%6 )+ 1 
+        document.write("Random dice value is: "+num);
+
+        // Task no 5
+        var num = Math.random();
+        num = (( num * 100000000000000000) % 2 )+ 1 ;
+        num = parseInt(num);        
+        if(num == 1){
+            document.write(num+"<br>Random coin value is: Tail");
+        }
+        else{
+            document.write(num+"<br>Random coin value is: Head");
+        }
+
+        // Task no 6
+        var num = Math.random();
+        num = (( num * 100000000000000000) % 100 )+ 1 ;
+        num = parseInt(num)
+        document.write("Random number between 1 to 100 is: "+ num);
+
+        // Task no 7
+
+            // Confusion in Question
+
+        // Task no 8
+        var num = Math.random();
+        num = (num * 10) + 1;
+        console.log(num)
+        var secNum = Math.floor(num);
+
+        var userInput = Number(prompt("Enter number betweem 1 to 10"));
+        if (secNum === userInput) {
+            alert("congratulation your guess right number");
+        }
+        else {
+            alert("Try again!");
+        }
+
 
 
 
