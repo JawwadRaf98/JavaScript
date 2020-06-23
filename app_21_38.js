@@ -298,9 +298,53 @@
         var miliSecTillToday = today.getTime()
         var diffDays = (miliSecTillToday - miliSecTillRamzan)/(1000*60*60*24)
         document.write(Math.floor(diffDays)+ " Days past since 1st Ramzan, 2020")
-        
+    
+        // Task no 10
+        var jan  = new Date("jan 1, 2020")
+        var today = new Date()
+        var miliSecTillJan = jan.getTime()
+        var miliSecTillToday = today.getTime()
+        var diffSec = (miliSecTillToday - miliSecTillJan)/(1000)
+        document.write("On Refrence date: "+jan+"<br>")
+        document.write(Math.floor(diffSec) +" passed since beginning og 2020")
 
-        
+        // Task no 11
+        var time = new Date()
+        var changeHour = time.getHours() - 1
+        var stringTime = time.toString()
+        var updateTime = stringTime.slice(0,16) + changeHour + stringTime.slice(18)
+        document.write("Current date: "+ time +"<br>")
+        document.write("1 Hour ago it was "+ updateTime)
+
+        // Task no 12
+        var year1920  = new Date("june 23, 1920")
+        var today = new Date()
+        document.write("Current Date: "+ today +" <br> ")
+        document.write("100 year back it was "+ year1920)
+
+        // Task no 13
+        var time  = new Date()
+        var age = time.getFullYear() - 1998;
+        document.write("Your age is "+ age +"<br>")
+        document.write("Your birth year is 1998")
+
+        // Task no 14
+        var name = "Jawwad"
+        var month = "March"
+        var numOfUnit = 410
+        var ratePerUnit = 16
+        var latePaymentCharge = 350
+        var netAmount = numOfUnit * ratePerUnit
+        var grossAmount = netAmount + latePaymentCharge
+
+        document.write("<h1>K-Electric Bill</h1><br><br>")
+        document.write("Customer Name: "+ name +"<br>")
+        document.write("Month: "+ month + "<br>")
+        document.write("Number of unit: "+ numOfUnit + "<br>")
+        document.write("Charges per unit: "+ ratePerUnit + "<br><br>")           
+        document.write("Net Amount Payable (within Due Date): <b>"+ netAmount.toFixed(2)+ "</b><br>")
+        document.write("Late payment charges: <b>"+ latePaymentCharge.toFixed(2)+ "</b><br>")
+        document.write("Gross Amount Payable (after Due Date): <b>"+ grossAmount.toFixed(2)+ "</b><br>")        
 
 
 
