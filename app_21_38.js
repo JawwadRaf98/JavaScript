@@ -233,6 +233,75 @@
             alert("Try again!");
         }
 
+// Chapter no 31- 34
+
+        // Task no 1
+        var time = new Date()
+        document.write(time)
+
+        // Task no 2
+        var time = new Date()
+        var months = ["January", "Febraury", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        document.write("Current month: "+months[time.getMonth()])
+
+        // Task no 3
+        var time = new Date()
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        document.write("Today is "+days[time.getDay()])
+
+        // Task no 4
+        var time = new Date()
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        var day = time.getDay()   
+        if(day === 0 || day === 6){
+            alert("It's Fun Day!")
+        }
+        else{
+            alert("Today is "+days[time.getDay()])
+        }
+
+        // Task no 5
+        var time = new Date()
+        var day = time.getDate()   
+        if(day <= 15){
+            alert("First fifteen days of month!")
+        }
+        else{
+            alert("Last fifteen days of month!")
+        }
+        
+        // Task no 6   
+        var currentDate = new Date()
+
+        document.write("Current date: "+ currentDate+ "<br>")
+        document.write("Elapsed milisecond since januaury 1st ,1970: "+currentDate.getTime()+ "<br> ")
+        document.write("Elapsed minutes since januaury 1st ,1970: "+(currentDate.getTime() / 60))
+
+        // Task no 7
+        var time = new Date()
+        var hours = time.getHours()
+        if(hours<12){
+            alert("It's AM")
+        }
+        else{
+            alert("It's PM")
+        }
+
+        // Task no 8
+        var laterDay  = new Date("Dec 31, 2020")
+        document.write("Later Day: "+laterDay)
+
+        // Task no 9
+        var ramzan2020  = new Date("april 24, 2020")
+        var today = new Date()
+        var miliSecTillRamzan = ramzan2020.getTime()
+        var miliSecTillToday = today.getTime()
+        var diffDays = (miliSecTillToday - miliSecTillRamzan)/(1000*60*60*24)
+        document.write(Math.floor(diffDays)+ " Days past since 1st Ramzan, 2020")
+        
+
+        
+
 
 
 
