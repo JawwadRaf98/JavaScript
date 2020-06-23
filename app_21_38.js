@@ -369,6 +369,32 @@
         sum()
 
         // Task no 4
+        function calculator(){
+
+            var num1 = parseInt(prompt("Please Enter First Number"))
+            var opt = prompt("Please Enter Operator Among These\nAddition(+)\nSubtraction(-)\nMultiplication(*)\nDivision(/)\nModulus/Ramainder(%)")
+            var num2= parseInt(prompt("Please Enter Second Number"))
+            if(opt === "+"){
+                document.write(num1 + " "+ opt +" "+ num2 + " = "+ (num1 + num2))
+            }
+            else if(opt === "-"){
+                document.write(num1 + " "+ opt +" "+ num2 + " = "+ (num1 - num2))
+            }
+            else if(opt === "*"){
+                document.write(num1 + " "+ opt +" "+ num2 + " = "+ (num1 * num2))
+            }
+            else if(opt === "/"){
+                document.write(num1 + " "+ opt +" "+ num2 + " = "+ (num1 / num2))
+            }
+            else if(opt === "%"){
+                document.write(num1 + " "+ opt +" "+ num2 + " = "+ (num1 % num2))
+            }
+            else{
+                alert("invalid operator")
+            }
+
+        }
+        calculator()
 
 
         // Task no 5
@@ -435,6 +461,94 @@
         Area(width, height)
 
         // Task no 10
+        function palindrome(w){
+            var word = w;
+            var flag = false
+            for(var i =0 ; i<= word.length-1 ;i++){
+                if(word[i] === word[word.length-i-1]){
+                    flag = true
+                 }
+                 else{
+                     flag = false
+                     break
+                 }
+            }
+            if(flag){
+                 alert(word + " is palindrom")
+            }
+            else{
+             alert(word + " is not palindrom")
+            }
+             
+         }
+         palindrome("civic")
+
+        //  Task no 11
+        function capitalCase(w) {
+            var str = w
+            var array = str.split(" ");
+            document.write("EXAMPLE STRING: "+str+ " <br> ")
+            document.write("CAPITALISE STRING: ")
+            for(var i = 0; i<=array.length -1 ;i++){
+                var word = array[i]
+                word = word[0].toUpperCase() + word.slice(1)
+                document.write(word+ " ")
+            }
+        }
+        capitalCase("my name is jawwad")
+        
+        //Task no 12
+        function capitalCase(w) {
+            var str = w
+            var array = str.split(" ");
+            // document.write("EXAMPLE STRING: "+str+ " <br> ")
+            // document.write("LARGEST WORD: ")
+            var longlen = 0
+            var longWord = ""
+            for(var i = 0; i<=array.length -1 ;i++){
+                if(array[i].length > longlen){
+                    longlen = array[i].length
+                    longWord = array[i]
+                }
+            }
+            document.write("String: "+ str +"<br>")
+            document.write("Longest word: <b>"+ longWord +"</b><br>")
+        }
+        capitalCase("Web Development Tutorial")
+        
+        // Task no 13
+        function countLater(w , o) {
+            var word = w
+            var occ = o
+            var len = word.length
+            var counter = 0
+            for(var i = 0; i<len; i++){
+                if(w[i].toLowerCase() === occ.toLowerCase()){
+                    counter = counter + 1
+                }
+
+            }
+            document.write("String: "+ w +"<br>")
+            document.write("Occuarance of: <b>"+ o +"</b> is "+ counter +"<br>")
+        }
+        countLater("Jawwad", 'A')
+
+        // Task no 14
+        function calcCircumference(r){
+            radius = parseFloat(r)
+            var Circumference = 2 * 3.142 * radius
+            function calcArea(rad){
+                return (rad*rad)
+            }
+            var area = calcArea(radius) *3.142
+
+            document.write("Circumference of circle: " + Circumference + "<br>")
+            document.write("Area of circle: " + area + "<br>")
+
+        }
+        calcCircumference(1)
+
+
 
 
 
