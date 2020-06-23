@@ -7,20 +7,22 @@
     <title>Document</title>
     <script>
         
-        
+        function Hypotenuse(b, p){
+            var base = parseFloat(b);
+            var perp = parseFloat(p)
+            
+            function Square(num){
+                return(num*num)
+            }
 
+            var sqBase = Square(base)
+            var sqPerp = Square(perp)
+            var sqHyp = sqBase + sqPerp
+            var hyp = Math.sqrt(sqHyp)
+            alert("Hypotenuse is " +hyp.toFixed(2))
+        }
 
-
-
-    
-
-       
-
-
-
-
-
-
+        Hypotenuse(2 ,3)
 
 
     </script>

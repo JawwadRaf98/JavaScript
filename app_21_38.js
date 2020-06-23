@@ -346,9 +346,96 @@
         document.write("Late payment charges: <b>"+ latePaymentCharge.toFixed(2)+ "</b><br>")
         document.write("Gross Amount Payable (after Due Date): <b>"+ grossAmount.toFixed(2)+ "</b><br>")        
 
+// Chapter no 35-38
+        // Task no 1
+        function timeDisplay(){
+            var date = new Date()
+            document.write("Current Date: "+ date)
+        }
+        timeDisplay()
+
+        // Task no 2
+        function greeting(first, last){
+            alert("Welcome "+first+ " "+ last)
+        }
+        greeting("Jawwad","Ahmed")
+
+        // Task no 3
+        function sum(){
+            var first = parseInt(prompt("Enter first number"))
+            var second = parseInt(prompt("Enter second number"))
+            alert(first+" + "+ second+" = "+ (first+second))
+        }
+        sum()
+
+        // Task no 4
+
+
+        // Task no 5
+        function square(num){
+            var num = parseInt(num)
+            alert("Square of "+num+" is "+(num*num))
+        }
+
+        square(4)
+
+        // Task no 6
+        function factorial(num){
+            var num = parseInt(num)
+            var result = 1
+            for( var i = num ; i>= 1 ; i--){
+                result = result * i
+            }
+            alert("factorail of "+num+" is "+ result)
+        }
+
+        factorial(5)
+
+        // Task no 7
+        function Counting(){
+            var num1 = parseInt(prompt("Please enter start of Counting"));
+            var num2 = parseInt(prompt("Please enter ending of Counting"));
+                for(var i = num1; i<= num2 ;i++){
+                    document.write(i +"  ")
+                }
+        }
+
+        Counting()
+
+        // Task no 8
+        function Hypotenuse(b, p){
+            var base = parseFloat(b);
+            var perp = parseFloat(p)
+            
+            function Square(num){
+                return(num*num)
+            }
+
+            var sqBase = Square(base)
+            var sqPerp = Square(perp)
+            var sqHyp = sqBase + sqPerp
+            var hyp = Math.sqrt(sqHyp)
+            alert("Hypotenuse is " +hyp.toFixed(2))
+        }
+
+        Hypotenuse(2 ,3)
+
+
+        // Task no 9
+        function Area(w , h){
+            var width = parseInt(w);
+            var height = parseInt(h)
+            var area = width * height;
+            alert("Area: "+ area)
+        }
+
+        Area(20 ,10)
+        var width = 20;
+        var height = 10;
+        Area(width, height)
+
+        // Task no 10
 
 
 
-
-
-    
+        
