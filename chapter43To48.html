@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+            padding: 20px 0px;
+            display: block;
+        }
+        .imageDiv{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .imageDiv img{
+            border: 1px solid blue;
+            padding: 10px ;
+            width: 100px;
+            height: 130px;
+        }
+        #task2Div{
+        width: fit-content;
+        margin: auto;
+        }
+        .setOverDiv{
+            width: fit-content;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid black;
+            align-items: center;
+        }
+        .setOverDiv img{           
+            width: 200px ;
+            height: 180px;
+        }
+        h2{
+            text-align: center;
+        }
+        .counter{
+            border: 1px solid black;
+            width: 200px;
+            margin: auto;
+            margin-bottom: 100px;
+        }
+        .button{
+            width: fit-content;
+            padding: 5px 10px;
+            margin: auto;
+        }
+        .button button{
+            width: 70px;
+            padding: 4px 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Task no 1</h1>
+    <a href="" onclick="alertFunction()">Click Me!</a>
+    <h1>Task no 2</h1>
+    <div id="task2Div">
+        <div class="imageDiv" onclick="imageAlert()">
+            <img src="mobile1.jpg" alt="">
+        </div>
+        <div class="imageDiv" onclick="imageAlert()">
+            <img src="mobile2.jpg" alt="">
+        </div>
+        <div class="imageDiv" onclick="imageAlert()">
+            <img src="mobile3.jpg" alt="">
+        </div>
+        <div class="imageDiv" onclick="imageAlert()">
+            <img src="mobile4.jpg" alt="">
+        </div>
+    </div>
+    <h1>Task no 3</h1>
+
+    <h1>Task no 4</h1>
+    <div class="setOverDiv">
+        <img src="5.jpg" id="image" alt="" onMouseover="src='6.jpg'" onMouseout="src='5.jpg'">
+    </div>
+
+    <h1>Task no 5</h1>
+    <div class="counter">
+        <h2>Counter</h2>
+        <div class="display">
+            <h1 id="number">
+                0
+            </h1>
+        </div>
+        <div class="button">
+            <button onclick="increment()">Plus</button>
+            <button onclick="decrement()">Minus</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function alertFunction(){
+            alert("Welcome to my website!")
+        }
+        function imageAlert(){
+            alert("Thanks for purchasing phone for us!")
+        }
+        function increment(){
+            var value = Number(document.getElementById('number').innerHTML)
+            value = value + 1
+            document.getElementById('number').innerHTML = value
+        }
+        function decrement(){
+            var value = Number(document.getElementById('number').innerHTML)
+            value = value - 1
+            document.getElementById('number').innerHTML = value
+        }
+        
+    </script>
+</body>
+</html>
