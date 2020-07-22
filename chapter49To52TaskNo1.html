@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .signUpForm {
+            width: 400px;
+            border: 1px solid black;
+            margin: 100px auto;
+            box-shadow: 0px 0px 8px silver;
+        }
+
+        .signUpForm .heading {
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .form input {
+            border: 1px solid silver;
+            border-radius: 10px;
+            font-size: 20px;
+            height: 25px;
+            padding: 5px 10px;
+            margin: 5px auto;
+            width: 90%;
+            display: block;
+        }
+
+        .form input:focus {
+            font-size: medium;
+            outline: none;
+            border: 1px solid silver;
+            border-radius: 10px;
+        }
+
+        #submit {
+            margin: 20px auto;
+            height: 30px;
+            border-radius: 25px;
+            width: 100px;
+            font-size: small;
+            background-color: rgb(240, 145, 145);
+            padding: 0px;
+            font-weight: bold;
+        }
+
+        table tr td {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Task No 1</h1>
+    <div class="signUpForm">
+        <h1 class="heading">Sing Up</h1>
+        <div class=" form">
+            <form action="" onsubmit="getValueOnSubmit()">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="lastName" placeholder="Last Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <input type="submit" id="submit">
+
+            </form>
+
+        </div>
+    </div>
+    <h1>Task No 2</h1>
+    <h3>Product Infomation</h3>
+    <div id="show">
+        <table>
+            <tr>
+                <td>Brand</td>
+                <td>Samsung</td>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>A-10</td>
+            </tr>
+        </table>
+        <a href="javascript:void(0);" onclick="showInfo()">click</a>
+    </div>
+
+    <h1>Task No 3</h1>
+
+
+    <script>
+        function getValueOnSubmit() {
+            var name = document.getElementById('name').value
+            var lastName = document.getElementById('lastName').value
+            var email = document.getElementById('email').value
+            var password = document.getElementById('password').value
+            console.log(name + lastName + email + password)
+            if (name === "") {
+                alert("Name is required")
+            }
+            else if (lastName === "") {
+                alert("Last name is required")
+            }
+            else if (email === "") {
+                alert("Email is required")
+            }
+            else if (password === "") {
+                alert("Email is required")
+            }
+            else {
+                document.write('<h4>')
+                document.write("Information<br>")
+                document.write("Name: " + name + "<br>")
+                document.write("Last Name: " + lastName + "<br>")
+                document.write("Email: " + email + "<br>")
+                document.write("Password: " + password + "<br>")
+                document.write('</h4>')
+            }
+        }
+
+        function showInfo() {
+            var moreInfo = "<table><tr> <td>Brand</td><td>Samsung</td></tr>    <tr><td>Model</td><td>A-10</td></tr>  <tr><td>Price</td><td>RS 30,000</td></tr>  <tr><td>Ram</td><td>4Gb</td></tr> <tr><td>Rom</td><td>64Gb</td></trRom</table > "
+            document.getElementById('show').innerHTML = moreInfo
+        }
+    </script>
+</body>
+
+</html>
