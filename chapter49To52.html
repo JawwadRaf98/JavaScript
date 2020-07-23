@@ -22,7 +22,8 @@
             font-size: 50px;
         }
 
-        .form input {
+        .form input,
+        .Studentform input {
             border: 1px solid silver;
             border-radius: 10px;
             font-size: 20px;
@@ -33,7 +34,8 @@
             display: block;
         }
 
-        .form input:focus {
+        .form input:focus,
+        .Studentform input:focus {
             font-size: medium;
             outline: none;
             border: 1px solid silver;
@@ -55,6 +57,23 @@
             border-top: 1px solid black;
             border-bottom: 1px solid black;
             padding: 10px 20px;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .Studentform {
+            min-width: 320px;
+            max-width: 500px;
+            border: 1px solid black;
+            margin: 50px auto;
+            padding: 50px;
+        }
+
+        .formBody input {
+            margin: 5px 0px;
+            /* border: 1px solid black; */
         }
     </style>
 </head>
@@ -92,42 +111,28 @@
     </div>
 
     <h1>Task No 3</h1>
+    <h3>Student Info Form</h3>
+    <div class=" Studentform">
+        <div class="formBody">
+            <form action="">
+                <input type="text" id="studentName" placeholder="Enter Name">
+                <input type="text" id="studentClass" placeholder="Enter Class">
+                <!-- <input type="submit" id="submit" onclick="addData()"> -->
+                <button onclick="addData()">Submit</button>
+            </form>
+        </div>
+        <div>
+            <table id="StudentDataInfo">
+
+            </table>
+
+        </div>
 
 
-    <script>
-        function getValueOnSubmit() {
-            var name = document.getElementById('name').value
-            var lastName = document.getElementById('lastName').value
-            var email = document.getElementById('email').value
-            var password = document.getElementById('password').value
-            console.log(name + lastName + email + password)
-            if (name === "") {
-                alert("Name is required")
-            }
-            else if (lastName === "") {
-                alert("Last name is required")
-            }
-            else if (email === "") {
-                alert("Email is required")
-            }
-            else if (password === "") {
-                alert("Email is required")
-            }
-            else {
-                document.write('<h4>')
-                document.write("Information<br>")
-                document.write("Name: " + name + "<br>")
-                document.write("Last Name: " + lastName + "<br>")
-                document.write("Email: " + email + "<br>")
-                document.write("Password: " + password + "<br>")
-                document.write('</h4>')
-            }
-        }
 
-        function showInfo() {
-            var moreInfo = "<table><tr> <td>Brand</td><td>Samsung</td></tr>    <tr><td>Model</td><td>A-10</td></tr>  <tr><td>Price</td><td>RS 30,000</td></tr>  <tr><td>Ram</td><td>4Gb</td></tr> <tr><td>Rom</td><td>64Gb</td></trRom</table > "
-            document.getElementById('show').innerHTML = moreInfo
-        }
+    </div>
+
+    <script src="chapter49To52.js">
     </script>
 </body>
 

@@ -75,6 +75,13 @@
         </div>
     </div>
     <h1>Task no 3</h1>
+<table id="studentInfo">
+    <tr><th>index</th><th>Name</th><th>Class</th></tr>
+    <!-- <tr><td>0</td><td>jawwad</td><td>10</td><td><button>Delete</button></td></tr> -->
+    
+</table>
+
+
 
     <h1>Task no 4</h1>
     <div class="setOverDiv">
@@ -118,6 +125,140 @@
             value = value - 1
             document.getElementById('number').innerHTML = value
         }
+        // Task no 3
+
+        var indexNo = 0
+        // Targeting Table
+        var studentInfo = document.getElementById('studentInfo')
+
+        // tr section start
+        var tr = document.createElement('tr')
+            // td section start
+            var td = document.createElement('td')
+            var tdText = document.createTextNode(indexNo++)
+            td.appendChild(tdText)
+            tr.appendChild(td)
+            // td section end
+
+            // td section start
+            var td = document.createElement('td')
+            var tdText = document.createTextNode('Jawwad')
+            td.appendChild(tdText)
+            tr.appendChild(td)
+            // td section end
+
+            // td section start
+            var td = document.createElement('td')
+            var tdText = document.createTextNode('10')
+            td.appendChild(tdText)
+            tr.appendChild(td)
+            // td section end
+        
+            // td section start
+            // button
+            var td = document.createElement('td')
+            var btn = document.createElement('button')
+            var btnText = document.createTextNode('Delete')
+            btn.setAttribute('onclick','delbtn(this)')
+            btn.appendChild(btnText)
+            td.appendChild(btn)
+            tr.appendChild(td)
+            // td section end
+        console.log(tr)
+        // tr section end
+
+        // addinf to table
+        studentInfo.appendChild(tr)
+
+
+// tr section start
+var tr = document.createElement('tr')
+    // td section start
+    var td = document.createElement('td')
+    var tdText = document.createTextNode(indexNo++)
+    td.appendChild(tdText)
+    tr.appendChild(td)
+    // td section end
+
+    // td section start
+    var td = document.createElement('td')
+    var tdText = document.createTextNode('Ahmed')
+    td.appendChild(tdText)
+    tr.appendChild(td)
+    // td section end
+
+    // td section start
+    var td = document.createElement('td')
+    var tdText = document.createTextNode('9')
+    td.appendChild(tdText)
+    tr.appendChild(td)
+    // td section end
+
+    // td section start
+    // button
+    var td = document.createElement('td')
+    var btn = document.createElement('button')
+    var btnText = document.createTextNode('Delete')
+    btn.setAttribute('onclick','delbtn(this)')
+    btn.appendChild(btnText)
+    td.appendChild(btn)
+    tr.appendChild(td)
+    // td section end
+console.log(tr)
+studentInfo.appendChild(tr)
+
+// tr section end
+
+// Targeting Table
+
+// tr section start
+var tr = document.createElement('tr')
+    // td section start
+    var td = document.createElement('td')
+    var tdText = document.createTextNode(indexNo++)
+    td.appendChild(tdText)
+    tr.appendChild(td)
+    // td section end
+
+    // td section start
+    var td = document.createElement('td')
+    var tdText = document.createTextNode('Ali')
+    td.appendChild(tdText)
+    tr.appendChild(td)
+    // td section end
+
+    // td section start
+    var td = document.createElement('td')
+    var tdText = document.createTextNode('8')
+    td.appendChild(tdText)
+    tr.appendChild(td)
+    // td section end
+
+    // td section start
+    // button
+    var td = document.createElement('td')
+    var btn = document.createElement('button')
+    var btnText = document.createTextNode('Delete')
+    btn.setAttribute('onclick','delbtn(this)')
+    btn.appendChild(btnText)
+    td.appendChild(btn)
+    tr.appendChild(td)
+    // td section end
+console.log(tr)
+// tr section end
+
+// addinf to table
+studentInfo.appendChild(tr)
+
+// addinf to table
+
+
+        function delbtn(e){
+            var td = e.parentNode
+            console.log(td.parentNode)
+            td.parentNode.remove()
+        }
+
         
     </script>
 </body>
